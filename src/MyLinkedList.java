@@ -21,14 +21,20 @@ public class MyLinkedList<T> {
     }
 
     public void delete(T value){
-        boolean found = false;
+        int a = getSize();
+        int b = 0;
         Node n = head;
-        while(n.value != value){
-            if(n.value == value){
-
-            }
+        Node newConnection = new Node(null, null);
+        Object placeHolder;
+        while(n.value != value || n.next != null){
             n = n.next;
+            b++;
+            if( a == b){
+                System.out.println("The value you where trying to delete is not there");
+                break;
+            }
         }
+
     }
 
     public int getSize(){
